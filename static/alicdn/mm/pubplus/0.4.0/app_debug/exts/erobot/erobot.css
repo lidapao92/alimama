@@ -1,0 +1,90 @@
+.aw-window {
+  display: none;
+}
+.erobot {
+  position: relative;
+}
+.erobot .erobot-trigger {
+  cursor: pointer;
+  color: #666;
+  width: 40px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #e2e2e9;
+}
+.erobot .erobot-trigger .pubfont {
+  font-size: 22px;
+}
+.erobot .erobot-trigger img {
+  height: 18px;
+  width: 18px;
+  margin-top: 5px;
+  vertical-align: top;
+}
+.erobot .erobot-trigger p {
+  width: 25px;
+  line-height: 1;
+  padding: 0 7px 7px 7px;
+}
+.erobot .erobot-trigger:hover {
+  background-color: #fa6419;
+}
+.erobot .erobot-trigger:hover {
+  color: #fff;
+}
+.erobot .erobot-panel {
+  display: none;
+  position: absolute;
+  right: 42px;
+  bottom: 0;
+  background-color: #fff;
+  border: 1px solid #e2e2e9;
+  width: 180px;
+}
+.erobot .erobot-panel .hd {
+  border-bottom: 1px solid #eee;
+  padding: 5px 10px;
+}
+.erobot .erobot-panel .hd h3 {
+  font-size: 20px;
+}
+.erobot .erobot-panel .hd .erobot-close {
+  float: right;
+  font-size: 14px;
+  cursor: pointer;
+}
+.erobot .erobot-panel .hd .erobot-close:hover {
+  color: #FA6419;
+}
+.erobot .erobot-panel .bd {
+  padding: 10px;
+}
+.erobot .erobot-panel .bd ol {
+  padding-left: 20px;
+}
+.erobot .erobot-panel .bd li {
+  color: #999;
+  list-style-type: decimal;
+}
+.erobot .erobot-panel .bd a {
+  color: #666;
+  padding: 5px 0;
+  display: block;
+}
+.erobot .erobot-panel .bd a:hover {
+  color: #FA6419;
+}
+.erobot .erobot-panel .ft a {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  display: block;
+  background-color: #ccc;
+  color: #fff;
+}
+.erobot .erobot-panel .ft a:hover {
+  background-color: #FA6419;
+}
+.erobot:hover .erobot-panel {
+  display: block;
+}

@@ -1,0 +1,95 @@
+/* Var */
+/**
+ * Mixins
+ **/
+.dialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  background-color: #fff;
+  border: 1px solid #d3d3db;
+  -moz-box-shadow: 0 4px 12px 0 rgba(32, 32, 64, 0.16);
+  -webkit-box-shadow: 0 4px 12px 0 rgba(32, 32, 64, 0.16);
+  -ms-box-shadow: 0 4px 12px 0 rgba(32, 32, 64, 0.16);
+  -o-box-shadow: 0 4px 12px 0 rgba(32, 32, 64, 0.16);
+  box-shadow: 0 4px 12px 0 rgba(32, 32, 64, 0.16);
+}
+.dialog.dialog-top {
+  margin-bottom: 2px;
+}
+.dialog.dialog-bottom {
+  margin-top: 2px;
+}
+.dialog.dialog-left {
+  margin-right: 2px;
+}
+.dialog.dialog-right {
+  margin-left: 2px;
+}
+.dialog .dialog-close {
+  -webkit-appearance: none;
+  padding: 0;
+  margin: 13px 8px 0 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  float: right;
+  line-height: 36px;
+  color: #ccc;
+  height: 36px;
+  width: 36px;
+  z-index: 1041;
+}
+.dialog .dialog-close span {
+  font-size: 14px;
+}
+.dialog .dialog-close:hover,
+.dialog .dialog-close:focus {
+  color: #f50;
+  text-decoration: none;
+  outline: none;
+}
+.dialog .dialog-hd {
+  background-color: #fafafa;
+}
+.dialog .dialog-hd .title {
+  color: #333;
+  font-size: 16px;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 40px;
+}
+.dialog .dialog-hd .tab-nav li {
+  color: #333;
+  cursor: pointer;
+  float: left;
+  font-size: 16px;
+  height: 48px;
+  line-height: 48px;
+  width: 134px;
+  text-align: center;
+}
+.dialog .dialog-hd .tab-nav li:hover {
+  background-color: #EDEDF0;
+  color: #fa6419;
+}
+.dialog .dialog-hd .tab-nav li.active {
+  background-color: #FFF;
+  color: #ff5500;
+  cursor: default;
+}
+.dialog .dialog-hd .tab-nav li.active:hover {
+  background-color: #FFF;
+}
+.dialog .dialog-bd {
+  padding: 20px 30px;
+}
+.dialog .dialog-ft {
+  padding: 10px 40px 20px;
+  text-align: center;
+}
+.dialog .dialog-extra {
+  padding: 0 40px 40px;
+  text-align: center;
+}

@@ -1,0 +1,6 @@
+.fixedtool {
+  position: fixed;
+  bottom: 61px;
+  background: #fff;
+  z-index: 999;
+}

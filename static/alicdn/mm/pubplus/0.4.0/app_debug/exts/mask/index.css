@@ -1,0 +1,96 @@
+.table-operation-mask {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  visibility: hidden;
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  z-index: 999;
+  -moz-transition: background 2s;
+  -webkit-transition: background 2s;
+  -ms-transition: background 2s;
+  -o-transition: background 2s;
+  transition: background 2s;
+}
+.table-operation-mask .mask-content-del,
+.table-operation-mask .mask-content {
+  width: 196px;
+  color: #fff;
+  font-size: 14px;
+}
+.table-operation-mask .mask-content {
+  margin: 70px auto 16px;
+}
+.table-operation-mask .mask-content-del {
+  margin: 10px auto 16px;
+}
+.table-operation-mask .mask-content-del,
+.table-operation-mask .three-bounce {
+  display: none;
+}
+.table-operation-mask .three-bounce {
+  margin-top: 85px;
+}
+.table-operation-mask .operation {
+  margin-left: -10px;
+}
+.table-operation-mask .operation .btn {
+  margin-left: 10px;
+}
+.table-operation-mask .operation .btn-common {
+  font-size: 12px;
+  height: 32px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  color: #999;
+  background-color: transparent;
+  overflow: hidden;
+}
+.table-operation-mask .operation .btn-common:hover {
+  border-color: #CCC;
+}
+.table-operation-mask .operation .btn-blue {
+  height: 32px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #2378ff;
+}
+.table-operation-mask.spin {
+  height: auto;
+  line-height: 1.42857143;
+}
+.table-operation-mask.spin .three-bounce div {
+  background-color: #FFF;
+}
+.table-operation-mask.spin .three-bounce,
+.table-operation-mask.spin .mask-content-del {
+  display: block;
+}
+.table-operation-mask.spin .operation,
+.table-operation-mask.spin .mask-content {
+  display: none;
+}
+.table-operation-mask .operation .btn-blue:hover,
+.table-operation-mask .operation .btn-blue.hover,
+.table-operation-mask .operation .btn-blue:focus,
+.table-operation-mask .operation .btn-blue.focus,
+.table-operation-mask .operation .btn-blue:active,
+.table-operation-mask .operation .btn-blue.active {
+  color: #fff;
+  background-color: #1c6bfd;
+}
+.table-operation-mask .operation .btn-gray {
+  height: 32px;
+  font-size: 12px;
+  color: #999999;
+  background-color: #F0F0F0;
+}
+.table-operation-mask .operation .btn-gray:hover,
+.table-operation-mask .operation .btn-gray.hover,
+.table-operation-mask .operation .btn-gray:focus,
+.table-operation-mask .operation .btn-gray.focus,
+.table-operation-mask .operation .btn-gray:active,
+.table-operation-mask .operation .btn-gray.active {
+  background-color: #E6E6E6;
+}

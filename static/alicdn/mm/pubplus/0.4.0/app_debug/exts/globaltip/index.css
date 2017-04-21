@@ -1,0 +1,24 @@
+.block-global-tip {
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  text-align: center;
+  font-size: 14px;
+  height: 28px;
+  line-height: 28px;
+  z-index: 100000;
+}
+.block-global-tip .error,
+.block-global-tip .ok {
+  padding: 0 14px;
+  position: relative;
+  left: -50%;
+}
+.block-global-tip .error {
+  background: #FFE2D4;
+  color: #a21000;
+}
+.block-global-tip .ok {
+  background: #F7F4F0;
+  color: #ff8800;
+}
