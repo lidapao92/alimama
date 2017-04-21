@@ -7,7 +7,7 @@
  * http://spm.alipay-inc.com/docs/alipay-apww/latest/examples/index.html
  */
 
-window.aliww = (function(undefined) {
+window.aliww = (function (undefined) {
     /**
      * 解决IE7以下对class选取兼容
      * http://www.cnblogs.com/rubylouvre/archive/2009/07/24/1529640.html
@@ -54,26 +54,26 @@ window.aliww = (function(undefined) {
         }
     }
 
-    function reqJsonp (url, callback){
+    function reqJsonp(url, callback) {
         var s = document.createElement('script')
         var _jsoncallback = window.jsonpcallback
         s.src = url + '&callback=jsonpcallback';
         var sc = document.getElementsByTagName("script")[0];
         sc.parentNode.insertBefore(s, sc);
-        window.jsonpcallback = function(res){
+        window.jsonpcallback = function (res) {
             callback.apply(null, arguments)
-            setTimeout(function(){
+            setTimeout(function () {
                 sc.parentNode.removeChild(s)
-                if(_jsoncallback){
+                if (_jsoncallback) {
                     window.jsonpcallback = _jsoncallback
-                }else{
-                    try{
+                } else {
+                    try {
                         delete window.jsonpcallback
-                    }catch(e){
+                    } catch (e) {
                         window.jsonpcallback = undefined
                     }
                 }
-            },0)
+            }, 0)
         }
     }
 
@@ -85,12 +85,12 @@ window.aliww = (function(undefined) {
         LINK_URL = 'http://www.taobao.com/webww/ww.php?ver=3&siteid=cntaobao&status=1&charset=utf-8&touid=',
         JSONP_URL = '/muliuserstatus.aw?beginnum=0&site=cntaobao&charset=utf-8&uids=';
 
-    return function(){
+    return function () {
         var accoutList = [], nameList = [];
 
         // 解析所有的 DOM，获取旺旺名
         var els = getElementsByClassName(DEFAULT_TRIGGER, document, '*')
-        for(var i= 0,l=els.length;i<l;i++){
+        for (var i = 0, l = els.length; i < l; i++) {
             var wwname = els[i].getAttribute(ATTR_WW_ACCOUNT)
             if (wwname) {
                 accoutList.push(els[i]);
@@ -102,12 +102,12 @@ window.aliww = (function(undefined) {
         if (nameList.length === 0) return;
 
         // 异步请求旺旺状态
-        reqJsonp(DEFAULT_HOST + JSONP_URL + nameList.join(';'), function(result) {
-            for(var i = 0, l= accoutList.length;i<l;i++){
+        reqJsonp(DEFAULT_HOST + JSONP_URL + nameList.join(';'), function (result) {
+            for (var i = 0, l = accoutList.length; i < l; i++) {
                 var status = LIGHT_TYPE[(result && result.success) ? result.data[i] : 0];
                 var wwClass = DEFAULT_PREFIX_CLASS;
                 // 设置状态样式
-                accoutList[i].className =[wwClass, wwClass + '-' + status].join(' ')
+                accoutList[i].className = [wwClass, wwClass + '-' + status].join(' ')
                 accoutList[i].href = LINK_URL + encodeURIComponent(accoutList[i].getAttribute(ATTR_WW_ACCOUNT))
                 accoutList[i].target = '_blank'
             }

@@ -1,15 +1,15 @@
 define('app/vclick', [
-  'jquery',
-  'magix'
+    'jquery',
+    'magix'
 ], function ($, Magix) {
-  $('body').on('click', 'a', function(e) {
-    var $tar = $(e.currentTarget)
-    var href = $tar.attr('href')
-    var ignore = $tar.attr('vclick-ignore')
+    $('body').on('click', 'a', function (e) {
+        var $tar = $(e.currentTarget)
+        var href = $tar.attr('href')
+        var ignore = $tar.attr('vclick-ignore')
 
-    if (href && /^\/[^\/]/.test(href) && !ignore) {
-      e.preventDefault()
-      Magix.Router.navigate(href)
-    }
-  })
+        if (href && /^\/[^\/]/.test(href) && !ignore) {
+            e.preventDefault()
+            Magix.Router.navigate(href)
+        }
+    })
 })
